@@ -14,5 +14,5 @@ type = ["character", "location"]
 
 
 50.times do |time|
-    Sushi.create(name: Faker::TwinPeaks.unique.send(type.sample) + " " + attributes.sample + " " + sushi_name.sample)
+    Sushi.create(name: Faker::TvShows::TwinPeaks.unique.send(type.sample) + " " + attributes.sample + " " + sushi_name.sample)
 end
