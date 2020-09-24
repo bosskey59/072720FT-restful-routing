@@ -8,5 +8,12 @@
   <img class="img-responsive" src="http://sweetclipart.com/multisite/sweetclipart/files/sushi_rolls_futomaki_ebi.png"/>
 </div>
 
-<h4 class="red-text">Name:</h4>
+<h4 class="red-text">Name: <%= @sushi.name %> </h4>
+
+<h6>
+  <%= link_to "Edit", edit_sushi_path(@sushi)  %>
+</h6>
+<h6>
+  <%= button_to "Delete", @sushi , method: :delete, data: {confirm: "Fo real?"} %>
+</h6>
 

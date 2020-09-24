@@ -6,7 +6,10 @@
     <div class="col-xs-8">
       <p>Alter this sushi to your heart's content:</p>
       <br/>
-      <%# form here %>
+      <%= form_with model:@sushi, local: :true do |form| %>
+        <%= form.text_field :name %>
+        <%= form.submit%>
+      <% end %>
   </div>
   <div class="col-xs-4">
     <div class="card" style="width: 20rem;">

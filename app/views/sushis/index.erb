@@ -2,7 +2,11 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-6">
-      <%# add sushis here %>
+      <ul>
+        <% @sushis.each do |s| %>
+          <li> <%= link_to s.name, sushi_path(s.id) %> </li>
+        <% end %>
+      </ul>
     </div>
     <div class="col-xs-6">
       <div class="background-div">

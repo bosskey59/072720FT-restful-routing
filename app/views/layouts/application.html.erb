@@ -33,6 +33,9 @@
         </div>
         <div class="row">
           <div class="well">
+            <% if flash[:notice] %>
+              <div class="red-text"><%= flash[:notice] %></div>
+            <% end %>
             <%= yield %>
           </div>
         </div>
