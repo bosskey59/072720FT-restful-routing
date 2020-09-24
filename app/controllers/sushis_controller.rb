@@ -1,6 +1,7 @@
 class SushisController < ApplicationController
 
   def index
+    byebug
     @sushis = Sushi.all
   end
 
