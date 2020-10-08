@@ -1,0 +1,15 @@
+<% if @sushi %>
+<h4> <%= @sushi.name %>'s  Ingredients:</h4>
+<ul>
+ <% @ingredients.each do |ing| %>
+ <li><%= link_to ing.name, sushi_ingredient_path(@sushi, ing) %></li> 
+ <% end %>
+</ul>
+<% else %>
+<h4>All Ingredients:</h4>
+<ul>
+ <% @ingredients.each do |ing| %>
+ <li><%= link_to ing.name, ing %></li> 
+ <% end %>
+</ul>
+<% end %>

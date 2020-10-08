@@ -1,0 +1,17 @@
+<%= form_with model:food_item, local: :true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name, class: food_item.errors.any? ? "custom_errors" : nil %>
+  <br>
+  <h4>ingredients:</h4>
+  <%= form.fields_for :ingredients  do |ing| %>
+    <%= ing.label :name %>
+    <%= ing.text_field :name %>
+    <%= ing.label :calories %>
+    <%= ing.number_field :calories %>
+    <%= ing.label :ss_grams %>
+    <%= ing.number_field :ss_grams %>
+  <% end %>
+  <br>
+  <%= form.submit%>
+<% end %>
+

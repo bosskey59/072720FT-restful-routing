@@ -78,3 +78,8 @@ body {
 .red-text {
     color: darkred
 }
+
+.custom_errors{
+    border-style: solid ;
+    border-color: darkred;
+}

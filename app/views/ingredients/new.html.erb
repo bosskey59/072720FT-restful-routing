@@ -1,0 +1,9 @@
+  <%= form_for [@sushi, @ingredient] do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :calories %>
+    <%= f.number_field :calories %>
+    <%= f.label :ss_grams %>
+    <%= f.number_field :ss_grams %>
+    <%= f.submit %>
+  <% end %>

@@ -5,11 +5,10 @@
       <br/>
       <p>You name it, we make it. Fill out your preference and our waiter will bring it directly to you.</p>
       <br/>
-      <%# form here %>
-      <%= form_with model:@sushi, local: :true do |form| %>
-        <%= form.text_field :name %>
-        <%= form.submit%>
-      <% end %>
+      <%# insert partial here %>
+      <%= @path %>
+      <%= render partial:'form', locals: {food_item: @sushi} %>
+      
 
     </div>
     <div class="col-xs-4">

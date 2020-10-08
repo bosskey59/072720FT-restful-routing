@@ -4,7 +4,7 @@
     <div class="col-xs-6">
       <ul>
         <% @sushis.each do |s| %>
-          <li> <%= link_to s.name, sushi_path(s.id) %> </li>
+          <li> <%= link_to s.name, sushi_path(s.id) %>  - <%= formated_date(s) %></li>
         <% end %>
       </ul>
     </div>
